@@ -1,0 +1,251 @@
+/* Жалпы баштапкы жөндөөлөр */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Спорттук стиль үчүн калың шрифттер */
+}
+
+body {
+    background-color: #0b0f12; /* Абдан кочкул спорттук фон */
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+/* 1. Navbar Стилдери */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(11, 15, 18, 0.95);
+    border-bottom: 2px solid #1a232a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.neon-text {
+    color: #00ff66; /* Неон жашыл спорттук түс */
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.4);
+}
+
+.nav-links a {
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    color: #94a3b8;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ff66;
+}
+
+/* 2. Hero Section Стилдери */
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(11, 15, 18, 0.5), #0b0f12);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.top-badge {
+    font-family: 'Arial', sans-serif;
+    background-color: #00ff66;
+    color: #0b0f12;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.btn-main {
+    font-family: 'Arial', sans-serif;
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #00ff66;
+    color: #0b0f12;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 255, 102, 0.4);
+}
+
+/* 3. Services / Оюнчулардын Карточкалары */
+.services-players {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.player-card {
+    background-color: #12181f;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    flex: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff66;
+}
+
+/* Карточканын сүрөттөрү (Убактылуу түстүү фондор, кааласаң шилтеме коёсуң) */
+.player-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+.ronaldo { background-image: url('https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=400&auto=format&fit=crop'); background-color: #1e3a8a; }
+.mbappe { background-image: url('https://images.unsplash.com/photo-1579952362874-460f38db3a15?q=80&w=400&auto=format&fit=crop'); background-color: #581c87; }
+.neymar { background-image: url('https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=400&auto=format&fit=crop'); background-color: #065f46; }
+
+.card-info {
+    padding: 25px;
+    position: relative;
+}
+
+.jersey-num {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    font-size: 3rem;
+    color: rgba(0, 255, 102, 0.2);
+    font-weight: 900;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.position {
+    font-family: 'Arial', sans-serif;
+    color: #00ff66;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.desc {
+    font-family: 'Arial', sans-serif;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 4. Footer Стилдери */
+.footer {
+    background-color: #070a0c;
+    color: #475569;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    border-top: 1px solid #12181f;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   📱 RESPONSIVE (Талап кылынган мобилдик версия)
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Карточкалар телефондо катар эмес, вертикалдуу тизилет */
+    .card-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .player-img {
+        height: 250px; /* Телефондо сүрөт чоңураак көрүнөт */
+    }
+}
